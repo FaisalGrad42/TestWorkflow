@@ -1,1 +1,42 @@
-Test
+{
+  "schema_version": 1,
+  "name": "Testing_workflow",
+  "description": "Here we test Agents",
+  "guid": "474c58a069ab569508e681105d040e07",
+  "tag_fg_color": "#ffffff",
+  "tag_bg_color": "#5bc0de",
+  "icon": "adjust",
+  "exported_at": "2025-11-19T16:39:54Z",
+  "agents": [
+    {
+      "type": "Agents::ManualMessageAgent",
+      "name": "Test_message_Agent",
+      "disabled": false,
+      "guid": "7d9709cf335cbfbce2886c17d57fc446",
+      "options": {
+        "no options": "are needed",
+        "produces_unsafe_messages": true,
+        "accept_unsafe_messages": "reject"
+      },
+      "keep_messages_for": 0
+    },
+    {
+      "type": "Agents::WebFormAgent",
+      "name": "Test_Web_Form_Agent",
+      "disabled": false,
+      "guid": "f51d223a1f192a441a1504af29d9dfaa",
+      "options": {
+        "produces_unsafe_messages": true,
+        "accept_unsafe_messages": "reject",
+        "secret": "formsecret",
+        "form_fields": "[{\"name\":\"message\",\"label\":\"Nachricht\",\"type\":\"text\"},\r\n {\"name\": \"attachment\", \"label\": \"Datei\", \"type\": \"file\"}]",
+        "response_text": "Form received",
+        "custom_css": "",
+        "accepted_files_types": "text/plain,application/pdf,image/jpeg,image/png,application/zip,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      "keep_messages_for": 0
+    }
+  ],
+  "links": [],
+  "control_links": []
+}
